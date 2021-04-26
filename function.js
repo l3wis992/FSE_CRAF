@@ -3,6 +3,5 @@ function generatePDF(){
 
     html2pdf()
     .from(element)
-    save();
-
+    .save();
 }
