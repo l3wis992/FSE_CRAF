@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Intro Page</title>
+  <title>Form Page 1</title>
   <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
@@ -17,62 +17,60 @@
   <div id="centre" class="centre">
     <form action="signup.html" method="get" id="signup">
       <h1>Your Name and Email please!</h1>
-
       <!--Name/email entry-->
       <table class="centre">
-        <tr>
-          <td> <input type="text" placeholder="Experiment Title"> </td>
-          <td> <input type="text" placeholder="Input Here"> </td>
-        </tr>
-      </table>
-      <div id="box"></div>
-      <!--Reaction Hazards-->
-      <h1 class="centre">Reaction hazards</h1>
-      <table class="centre" style="width:1000px">
-        <tr>
-          <td> <input type="checkbox" name="reaction_hazard" value="fire_explosion_risk"> Fire/explosion risk</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="flammable_liquid"> Flammable liquid</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="asphyxiant"> Asphyxiant</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="air_sensitive"> Air sensitive</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="hot_liquids"> Hot liquids</td>
-        </tr>
-        <tr>
-          <td> <input type="checkbox" name="reaction_hazard" value="gas_release_or_hi_pressure"> Gas release/high pressure reaction </td>
-          <td> <input type="checkbox" name="reaction_hazard" value="corrosive"> Corrosive</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="stench"> Stench </td>
-          <td> <input type="checkbox" name="reaction_hazard" value="moisture_sensitive"> Moisture sensitive </td>
-          <td> <input type="checkbox" name="reaction_hazard" value="ignition_sources"> Ignition sources</td>
-        </tr>
-        <tr>
-          <td> <input type="checkbox" name="reaction_hazard" value="carcinogen_mutagen"> Known human carcinogen/mutagen</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="toxic"> Toxic</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="biological"> Biological</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="security_sensitive"> Security sensitive</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="uv_xray_laser"> UV/X-ray/Laser</td>
-        </tr>
-        <tr>
-          <td> <input type="checkbox" name="reaction_hazard" value="hazard_to_environment"> Hazardous to the environment</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="oxidiser"> Oxidiser</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="radioactive"> Radioactive</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="cryogen"> Cryogens</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="stills"> Use of stills</td>
-        </tr>
-        <tr>
-          <td> <input type="checkbox" name="reaction_hazard" value="prolonged_reaction"> Prolonged reaction (i.e. >8 hrs)</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="reproductive_hazard"> Reproductive hazard (teratogen)</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="sensitiser_irritant"> Sensitiser/irritant</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="electrical_hazard"> Electrical hazard</td>
-          <td> <input type="checkbox" name="reaction_hazard" value="endo_exothermic"> Endo-Exothermic</td>
-        </tr>
-      </table>
+        <tr><td> <input type="text" placeholder="Experiment Title"></td></tr>
+        <tr><td> <input type="text" placeholder="Full Name"> </td></tr>
+        </table>
+        <div id="box"></div>
+        <!--Reaction Hazards-->
+        <h1 class="centre">Reaction hazards</h1>
+        <table class="centre" style="width:1000px">
+          <tr>
+            <td> <input type="checkbox" name="reaction_hazard" value="fire_explosion_risk"> Fire/explosion risk</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="flammable_liquid"> Flammable liquid</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="asphyxiant"> Asphyxiant</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="air_sensitive"> Air sensitive</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="hot_liquids"> Hot liquids</td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" name="reaction_hazard" value="gas_release_or_hi_pressure"> Gas release/high pressure reaction </td>
+            <td> <input type="checkbox" name="reaction_hazard" value="corrosive"> Corrosive</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="stench"> Stench </td>
+            <td> <input type="checkbox" name="reaction_hazard" value="moisture_sensitive"> Moisture sensitive </td>
+            <td> <input type="checkbox" name="reaction_hazard" value="ignition_sources"> Ignition sources</td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" name="reaction_hazard" value="carcinogen_mutagen"> Known human carcinogen/mutagen</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="toxic"> Toxic</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="biological"> Biological</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="security_sensitive"> Security sensitive</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="uv_xray_laser"> UV/X-ray/Laser</td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" name="reaction_hazard" value="hazard_to_environment"> Hazardous to the environment</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="oxidiser"> Oxidiser</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="radioactive"> Radioactive</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="cryogen"> Cryogens</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="stills"> Use of stills</td>
+          </tr>
+          <tr>
+            <td> <input type="checkbox" name="reaction_hazard" value="prolonged_reaction"> Prolonged reaction (i.e. >8 hrs)</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="reproductive_hazard"> Reproductive hazard (teratogen)</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="sensitiser_irritant"> Sensitiser/irritant</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="electrical_hazard"> Electrical hazard</td>
+            <td> <input type="checkbox" name="reaction_hazard" value="endo_exothermic"> Endo-Exothermic</td>
+          </tr>
+        </table>
 
-      <!--Additional Safety implications-->
-      <div id="box"></div>
-      <h1 class="centre">Additional Safety Implications</h1>
-      <textarea name="name" rows="8" cols="80" placeholder="Enter Text Here"></textarea>
-
-    </form>
-  </div>
-  <script src="js/form.js"></script>
-</body>
-</html>
+        <!--Additional Safety implications-->
+        <div id="box"></div>
+        <h1 class="centre">Additional Safety Implications</h1>
+        <textarea name="safety_implications" rows="8" cols="80" placeholder="Enter Text Here"></textarea>
+        <br>
+        <input type="submit" value="Submit All" class="centre">
+      </form>
+    </div>
+    <script src="js/form.js"></script>
+  </body>
+  </html>
