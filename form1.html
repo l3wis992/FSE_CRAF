@@ -81,6 +81,29 @@
       <input type="submit" value="Submit All" class="centre">
       <div id="box"></div>
 
+     <!--Risk Assessment-->
+        <h1>Risk Assessment</h1>
+        <form action="/action_page.php">
+          <textarea name="message" rows="2" cols="20">Exposure to corrosive chemicals.</textarea>
+          <br><br>
+        <label for="likelihood">Likelihood</label>
+           <select id="likelihood" name="likelihood">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+           </select>
+        <label for="consequence">Consequence:</label>
+           <select id="consequence" name="consequence">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+           </select>
+         <div id="box"></div>
+
       <!--Control Measures-->
       <h1 class="centre">Control Measures</h1>
       <table class="centre" style="width:1000px">
