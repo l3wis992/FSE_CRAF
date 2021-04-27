@@ -1,0 +1,14 @@
+    #box {
+      margin: 100px;
+    }
+
+    .centre {
+      margin: auto;
+      text-align: center;
+    }
+
+    table.centre {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
