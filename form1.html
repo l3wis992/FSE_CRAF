@@ -5,7 +5,7 @@
   <title>Form Page 1</title>
   <link rel="stylesheet" href="css/form.css">
   <img src="img/mqLogo.png" alt="logo">
-  
+
 </head>
 
 <body>
@@ -78,18 +78,20 @@
     <!--Additional Safety implications-->
     <div id="section3">
       <h2 class="as-heading">Additional Safety Implications</h2>
-      <textarea name="safety_implications" rows="8" cols="79" placeholder="Enter Text Here"></textarea>
-      <br>
-      <input type="submit" value="Submit All" class="centre">
+      <div id="as-contents">
+        <textarea name="safety_implications" rows="8" cols="79" placeholder="Enter Text Here"></textarea>
+        <br>
+      </div>
     </div>
 
 
     <div id="section4">
       <!--Identified Hazards-->
       <h2 class="ih-heading">Identified Hazards (from above) </h2>
-      <textarea name="identified_hazards" rows="8" cols="79" placeholder="Enter Text Here"></textarea>
-      <br>
-      <input type="submit" value="Submit All" class="centre">
+      <div id="ih-contents">
+        <textarea name="identified_hazards" rows="25" cols="79" placeholder="Enter Text Here"></textarea>
+        <br>
+      </div>
 
       <div id="ra-content">
 
@@ -205,7 +207,7 @@
       </div>
 
       <div id="cm-content">
-        <table class="centre" style="width:1000px">
+        <table class="centre" style="max-width:100%">
           <tr>
             <td>Safety glasses<input type="checkbox" name="control_measures" value="Safety_glasses"></td>
             <td>Fume hood<input type="checkbox" name="control_measures" value="Fume_hood"> </td>
@@ -329,7 +331,7 @@
     <div id="section11">
       <h2 class="exp-heading">Experiment:</h2>
       <div id="s11textbox">
-      <textarea name="experiment" rows="10" cols="167" placeholder="Enter Text Here"></textarea>
+        <textarea name="experiment" rows="10" cols="173" placeholder="Enter Text Here"></textarea>
       </div>
     </div>
 
@@ -337,7 +339,13 @@
     <!--Chemicals Used-->
     <div id="section12">
       <table id="s12-table" style="max-width:100%">
-        <th>Chemicals Used</th> <th>MW</th> <th>mmol</th> <th>Density</th> <th>Mass</th> <th>Vol</th> <th>Hazards (consult SDS)</th>
+        <th>Chemicals Used</th>
+        <th>MW</th>
+        <th>mmol</th>
+        <th>Density</th>
+        <th>Mass</th>
+        <th>Vol</th>
+        <th>Hazards (consult SDS)</th>
         <tr>
           <td><input type="text"></td>
           <td><input type="text"></td>
