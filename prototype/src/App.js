@@ -3,7 +3,7 @@ import Form from './components/Form'
 import './App.css'
 import {
   BrowserRouter as Router,
-  Switch, Route, Link, Redirect
+  Route,
 } from "react-router-dom"
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Homepage />
       </Route>
       <Route path="/Form">
-        {/* <Form /> */}     {/* un-commment '<Form />' once we have code in 'Form.js' to display */}
+        <Form />
       </Route>
     </Router>
   )

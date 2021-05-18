@@ -15,15 +15,11 @@ const Homepage = () => {
 		</pre>
             </div>
             <div id="hp-button">
-                <button onClick={onClickHandler}>Get Started</button>
+                <button onClick={() => window.location="Form"}>Get Started</button>
             </div>
         </div>
 
     )
-}
-
-function onClickHandler() {
-    window.location = "Form";
 }
 
 export default Homepage
