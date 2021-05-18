@@ -6,12 +6,16 @@ const Form = () => {
 
     /**
      *  This is the code to generate a .txt file from the inputted form data. This will need to include ALL the form data 
-     *  within the 'data' variable with appropriate .txt formatting.
+     *  within the 'data' variable with appropriate .txt formatting. Ive already included the experiment title and name to be
+     *  generated in the text file, all we need to work on for now is to gather the rest of the form data INCLUDING 
+     *  a unique ID and the date/time of form submission and put it into the .txt file.
      */
     let saveFile = () => {
+        // need a variable for each 'section' of the form
         const title = document.getElementById('expTitle');
         const name = document.getElementById('name');
 
+        // add other form data inputs here
         let data =
             '\r Experiment Title: ' + title.value + ' \r\n ' +
             'Name: ' + name.value + ' \r\n ';
@@ -130,7 +134,7 @@ const Form = () => {
                             {/* <!--Risk Assessment--> */}
                             <h2 className="ra-heading">Risk Assessment</h2>
                             <textarea name="message" rows="2" cols="20" placeholder="Enter Text Here"></textarea>
-                            <br></br>
+                            <br></br><br></br>
                             <label htmlFor="likelihood">Likelihood</label>
                             <select id="likelihood" name="likelihood">
                                 <option value="1">1</option>
@@ -147,8 +151,9 @@ const Form = () => {
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <br></br>
+                            <br></br><br></br>
                             <textarea name="message" rows="2" cols="20" placeholder="Enter Text Here"></textarea>
+                            <br></br><br></br>
                             <label htmlFor="likelihood">Likelihood</label>
                             <select id="likelihood" name="likelihood">
                                 <option value="1">1</option>
@@ -165,9 +170,9 @@ const Form = () => {
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <br></br>
+                            <br></br><br></br>
                             <textarea name="message" rows="2" cols="20" placeholder="Enter Text Here"></textarea>
-                            <br></br>
+                            <br></br><br></br>
                             <label htmlFor="likelihood">Likelihood</label>
                             <select id="likelihood" name="likelihood">
                                 <option value="1">1</option>
@@ -184,8 +189,9 @@ const Form = () => {
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
+                            <br></br><br></br>
                             <textarea name="message" rows="2" cols="20" placeholder="Enter Text Here"></textarea>
-                            <br></br>
+                            <br></br><br></br>
                             <label htmlFor="likelihood">Likelihood</label>
                             <select id="likelihood" name="likelihood">
                                 <option value="1">1</option>
@@ -230,7 +236,7 @@ const Form = () => {
                                             <td> Thermal<input type="checkbox" name="gloves" value="Thermal"></input> </td>
                                         </tr>
                                         <tr>
-                                            <td>Other <input type="checkbox" name="gloves" value="PVA"></input> Specify: </td>
+                                            <td>Other <input type="checkbox"></input>Specify: <input type="text" name="gloves"></input></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -250,11 +256,11 @@ const Form = () => {
                                         <td>Goggles<input type="checkbox" name="control_measures" value="Goggles"></input> </td>
                                         <td>Lab coat<input type="checkbox" name="control_measures" value="Lab_coat"></input> </td>
                                         <td>Respirator<input type="checkbox" name="control_measures" value="Respirator"></input> </td>
-                                        <td>Other<input type="checkbox" name="control_measures" value="Other"></input> </td>
+                                        <td>Other<input type="checkbox"></input> Specify: <input type="text" name="control_measures"></input></td>
                                     </tr>
                                     <tr>
-                                        <td>Full face mask<input type="checkbox" name="control_measures" value="Full_face_mask"></input> </td>
-                                        <td>PC2/3 lab<input type="checkbox" name="control_measures" value="PC2/3_lab"></input> </td>
+                                        <td>Full face mask<input type="checkbox" name="control_measures" value="Full_face_mask"></input></td>
+                                        <td>PC2/3 lab<input type="checkbox" name="control_measures" value="PC2/3_lab"></input></td>
                                         <td>Schlenk line/closed vessel<input type="checkbox" name="control_measures"
                                             value="Schlenk_line/closed_vessel"></input> </td>
                                     </tr>
@@ -286,8 +292,8 @@ const Form = () => {
                                 <tr>
                                     <td> <input type="checkbox" name="emergency_procedures" value="Spill_kit"></input> Spill Kit</td>
                                     <td> <input type="checkbox" name="emergency_procedures" value="Restrict_access_to_area"></input> Restrict access to area</td>
-                                    <td>(specify):</td>
-                                    <td>Other (specify):</td>
+                                    <td>(specify):<input type="text"></input></td>
+                                    <td><input type="checkbox"></input>Other (specify):<input type="text"></input></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -319,7 +325,7 @@ const Form = () => {
                                     <tr>
                                         <td> Cytotoxic<input type="checkbox" name="waste_disposal" value="Cytotoxic"></input> </td>
                                         <td> Radioactive<input type="checkbox" name="waste_disposal" value="Radioactive"></input> </td>
-                                        <td> Other (specify): </td>
+                                        <td><input type="checkbox"></input> Other (specify): <input type="text"></input></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -335,7 +341,7 @@ const Form = () => {
                                     </tr>
                                     <tr>
                                         <td> Shock/vibration<input type="checkbox" name="end_product" value="Shock/vibration"></input> </td>
-                                        <td> Other <input type="checkbox" name="end_product" value="Biohazard"></input> Specify: </td>
+                                        <td> Other <input type="checkbox" name="end_product" value="Biohazard"></input> Specify:<input type="text"></input> </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -464,7 +470,7 @@ const Form = () => {
                             </div>
                         </div>
                     </div>
-                    <button type="submit">Save Form</button>
+                    <button id="saveButton" type="submit">Save Form</button>
                 </form>
             </div>
         </div>
