@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.homepage {
+    text-align: center;
+}
+
+.hp-welcomeMessage {
+    margin-top: 20px;
+}
+
+.hp-description {
+    margin-top: 20px;
+}
+
+#hp-button {
+    margin-top: 50px;
+}
