@@ -64,7 +64,7 @@ const Form = () => {
             'Experiment: ' + experiment.value;
 
         const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const file = new Date();
+        const file = new Date().getTime();
 
         let newLink = document.createElement("a");
         newLink.download = file;
