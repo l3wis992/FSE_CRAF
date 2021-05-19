@@ -42,6 +42,7 @@ const Form = () => {
         const assName = document.getElementById('assText');
         const coSignName = document.getElementById('cosignText');
         const experiment = document.getElementById('expText');
+		
 
         // const riskAss = document.getElementById('raTable');
         // const controlMeasures = document.getElementById('s5Table');
@@ -63,7 +64,7 @@ const Form = () => {
             'Experiment: ' + experiment.value;
 
         const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const file = 'formData.txt';
+        const file = new Date();
 
         let newLink = document.createElement("a");
         newLink.download = file;
