@@ -1,5 +1,5 @@
-import Homepage from './components/Homepage'
-import Form from './components/Form'
+import Homepage from './Homepage'
+import Form from './Form'
 import './App.css'
 import {
   BrowserRouter as Router,
