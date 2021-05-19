@@ -60,9 +60,9 @@ const Form = () => {
             'Risk Consequence' + riskConsequence.value + ' \r\n' +
             'Reaction Hazards' + reactionHazards.value + ' \r\n' +
             'Gloves' + gloves.value + ' \r\n' +
-            'cm Content' + cmContent.value + ' \r\n' +
+            'Control Measure Content' + cmContent.value + ' \r\n' +
             'Specify Prevention' + specifyPrevention.value + ' \r\n' +
-            'AEP' + AEP.value + ' \r\n' +
+            'Additional Emergency Procedures' + AEP.value + ' \r\n' +
             'Waste Disposal' + wasteDisposal.value + ' \r\n' +
             'Management of End Product' + endProduct.value 
 

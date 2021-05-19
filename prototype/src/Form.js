@@ -42,6 +42,15 @@ const Form = () => {
         const assName = document.getElementById('assText');
         const coSignName = document.getElementById('cosignText');
         const experiment = document.getElementById('expText');
+        const riskLikelihood = document.getElementById('likelihood');
+        const riskConsequence = document.getElementById('consequence');
+        const reactionHazards = document.getElementById('s2Table');
+        const gloves = document.getElementById('s5GloveTable');
+        const cmContent = document.getElementById('5Table');
+        const specifyPrevention = document.getElementById('section6');
+        const AEP = document.getElementById('section7');
+        const wasteDisposal = document.getElementById('s8tables');
+        const endProduct = document.getElementsByClassName('ep-table');
 		
 
         // const riskAss = document.getElementById('raTable');
@@ -62,6 +71,15 @@ const Form = () => {
             'Name of Assessor: ' + assName.value + ' \r\n' +
             'Name of Co-signatory: ' + coSignName.value + ' \r\n' +
             'Experiment: ' + experiment.value;
+            'Risk Liklihood: ' + riskLikelihood.value + ' \r\n' +
+            'Risk Consequence' + riskConsequence.value + ' \r\n' +
+            'Reaction Hazards' + reactionHazards.value + ' \r\n' +
+            'Gloves' + gloves.value + ' \r\n' +
+            'Control Measure Content' + cmContent.value + ' \r\n' +
+            'Specify Prevention' + specifyPrevention.value + ' \r\n' +
+            'Additional Emergency Procedures' + AEP.value + ' \r\n' +
+            'Waste Disposal' + wasteDisposal.value + ' \r\n' +
+            'Management of End Product' + endProduct.value 
 
         const textToBLOB = new Blob([data], { type: 'text/plain' });
         const file = new Date().getTime();
