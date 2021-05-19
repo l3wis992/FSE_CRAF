@@ -70,7 +70,7 @@ const Form = () => {
             'Identified Hazards: ' + idHazards.value + ' \r\n' +
             'Name of Assessor: ' + assName.value + ' \r\n' +
             'Name of Co-signatory: ' + coSignName.value + ' \r\n' +
-            'Experiment: ' + experiment.value;
+            'Experiment: ' + experiment.value; + ' \r\n' +
             'Risk Liklihood: ' + riskLikelihood.value + ' \r\n' +
             'Risk Consequence' + riskConsequence.value + ' \r\n' +
             'Reaction Hazards' + reactionHazards.value + ' \r\n' +
