@@ -5,20 +5,46 @@ const Form = () => {
 
 
     /**
+     *  -------- IMPORTANT PLEASE READ --------- 
+     * 
      *  This is the code to generate a .txt file from the inputted form data. This will need to include ALL the form data 
-     *  within the 'data' variable with appropriate .txt formatting. Ive already included the experiment title and name to be
-     *  generated in the text file, all we need to work on for now is to gather the rest of the form data INCLUDING 
-     *  a unique ID and the date/time of form submission and put it into the .txt file.
+     *  within the 'data' variable with appropriate .txt formatting. So far i've gathered the values from the textboxes within certain sections of the form,
+     *  so all thats left for now is to gather the inputted data from all checkboxes, dropdowns, tables etc. We will also need to include a UNIQUE ID and the 
+     *  DATE/TIME of form submission and add it to the .txt file.
+     * 
+     *  Gathering data from checkboxes, dropdowns and such may be a bit difficult and we may need to implement something to loop through the table and all its table data <td>
+     *  and see whether or not that value has been 'checked' by the user. If so, add it to the .txt file, otherwise don't include it in the .txt file. This is kinda where
+     *  i'm at, please suggest other ways if you know are easier lmao. 
      */
+    
     let saveFile = () => {
         // need a variable for each 'section' of the form
         const title = document.getElementById('expTitle');
         const name = document.getElementById('name');
+        const asImplications = document.getElementById('asText');
+        const idHazards = document.getElementById('ihText');
+        const assName = document.getElementById('assText');
+        const coSignName = document.getElementById('cosignText');
+        const experiment = document.getElementById('expText');
+
+        // const riskAss = document.getElementById('raTable');
+        // const controlMeasures = document.getElementById('s5Table');
+        // const gloves = document.getElementById('s5GloveTable');
+        // const reactionHazards = document.getElementById('s2Table');
+        // const emergProcedures = document.getElementById('');
+        // const wasteDis = document.getElementById('');
+        // const endProd = document.getElementById('');
+
 
         // add other form data inputs here
         let data =
-            '\r Experiment Title: ' + title.value + ' \r\n ' +
-            'Name: ' + name.value + ' \r\n ';
+            'Experiment Title: ' + title.value + ' \r\n' +
+            'Name: ' + name.value + ' \r\n' +
+            'Additional Safety Implications: ' + asImplications.value + ' \r\n' +
+            'Identified Hazards: ' + idHazards.value + ' \r\n' +
+            'Name of Assessor: ' + assName.value + ' \r\n' +
+            'Name of Co-signatory: ' + coSignName.value + ' \r\n' +
+            'Experiment: ' + experiment.value;
 
         const textToBLOB = new Blob([data], { type: 'text/plain' });
         const file = 'formData.txt';
@@ -70,7 +96,7 @@ const Form = () => {
                     <div id="section2">
                         <h1 className="headings">Reaction hazards</h1>
                         <div id="hazard-info">
-                            <table className="centre">
+                            <table id="s2Table" className="centre">
                                 <tbody>
                                     <tr>
                                         <td> Fire/explosion risk <input type="checkbox" name="reaction_hazard" value="fire_explosion-risk"></input></td>
@@ -117,7 +143,7 @@ const Form = () => {
                     <div id="section3">
                         <h2 className="as-heading">Additional Safety Implications</h2>
                         <div id="as-contents">
-                            <textarea name="safety_implications" rows="8" cols="79" placeholder="Enter Text Here"></textarea>
+                            <textarea name="safety_implications" id="asText" rows="8" cols="79" placeholder="Enter Text Here"></textarea>
                         </div>
                     </div>
 
@@ -126,7 +152,7 @@ const Form = () => {
                         {/* <!--Identified Hazards--> */}
                         <h2 className="ih-heading">Identified Hazards (from above) </h2>
                         <div id="ih-contents">
-                            <textarea name="identified_hazards" rows="25" cols="79" placeholder="Enter Text Here"></textarea>
+                            <textarea name="identified_hazards" id="ihText" rows="25" cols="79" placeholder="Enter Text Here"></textarea>
                             <br></br>
                         </div>
 
@@ -218,7 +244,7 @@ const Form = () => {
                             <h2 className="cm-heading">Control Measures</h2>
                             {/* <!--Gloves--> */}
                             <div id="glove-section">
-                                <table className="centre">
+                                <table id="s5GloveTable" className="centre">
                                     <tbody>
                                         <tr>
                                             <td>Gloves: </td>
@@ -244,7 +270,7 @@ const Form = () => {
                         </div>
 
                         <div id="cm-content">
-                            <table className="centre">
+                            <table id="s5Table" className="centre">
                                 <tbody>
                                     <tr>
                                         <td>Safety glasses<input type="checkbox" name="control_measures" value="Safety_glasses"></input></td>
@@ -359,8 +385,8 @@ const Form = () => {
                         </hgroup>
 
                         <div id="s9textboxes">
-                            <textarea name="name-of-assessor" rows="3" cols="100%" placeholder="Enter Text Here"></textarea>
-                            <textarea name="name-f-cosignatory" rows="3" cols="100%" placeholder="Enter Text Here"></textarea>
+                            <textarea name="name-of-assessor" id="assText" rows="3" cols="100%" placeholder="Enter Text Here"></textarea>
+                            <textarea name="name-f-cosignatory" id="cosignText" rows="3" cols="100%" placeholder="Enter Text Here"></textarea>
                         </div>
                     </div>
 
@@ -369,7 +395,7 @@ const Form = () => {
                     <div id="section11">
                         <h2 className="exp-heading">Experiment:</h2>
                         <div id="s11textbox">
-                            <textarea name="experiment" rows="10" cols="100%" placeholder="Enter Text Here"></textarea>
+                            <textarea name="experiment" id="expText" rows="10" cols="100%" placeholder="Enter Text Here"></textarea>
                         </div>
                     </div>
 
