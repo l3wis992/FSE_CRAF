@@ -25,12 +25,17 @@ const Form = () => {
      * 
      *  This is the code to generate a .txt file from the inputted form data. This will need to include ALL the form data 
      *  within the 'data' variable with appropriate .txt formatting. So far i've gathered the values from the textboxes within certain sections of the form,
-     *  so all thats left for now is to gather the inputted data from all checkboxes, dropdowns, tables etc. We will also need to include a UNIQUE ID and the 
-     *  DATE/TIME of form submission and add it to the .txt file.
+     *  so all thats left for now is to gather the inputted data from all CHECKBOXES, DROPDOWNS, TABLES etc.
      * 
-     *  Gathering data from checkboxes, dropdowns and such may be a bit difficult and we may need to implement something to loop through the table and all its table data <td>
+     *  Gathering data from checkboxes/dropdowns may be a bit difficult and we may need to implement something to loop through the table and all its table data <td>
      *  and see whether or not that value has been 'checked' by the user. If so, add it to the .txt file, otherwise don't include it in the .txt file. This is kinda where
      *  i'm at, please suggest other ways if you know are easier lmao. 
+     * 
+     * 
+     *  --- UPDATE --- 
+     *  I had to delete the addition to the 'data' variable you did Tony cause it caused my app to crash and it wasn't correct. I already tried doing it the way you did, hence why i said
+     *  gathering these types of data is more difficult and isn't as straight forward as it is getting the data from textboxes. Please just read what i said above as thats kinda my 2 cents 
+     *  on how to go about gathering the data from checkboxes/dropdowns, ofcourse that could be wrong but im like 99% sure there'll be a solution on google so just search and test it out.
      */
 
     let saveFile = () => {
@@ -42,25 +47,6 @@ const Form = () => {
         const assName = document.getElementById('assText');
         const coSignName = document.getElementById('cosignText');
         const experiment = document.getElementById('expText');
-        const riskLikelihood = document.getElementById('likelihood');
-        const riskConsequence = document.getElementById('consequence');
-        const reactionHazards = document.getElementById('s2Table');
-        const gloves = document.getElementById('s5GloveTable');
-        const cmContent = document.getElementById('5Table');
-        const specifyPrevention = document.getElementById('section6');
-        const AEP = document.getElementById('section7');
-        const wasteDisposal = document.getElementById('s8tables');
-        const endProduct = document.getElementsByClassName('ep-table');
-		
-
-        // const riskAss = document.getElementById('raTable');
-        // const controlMeasures = document.getElementById('s5Table');
-        // const gloves = document.getElementById('s5GloveTable');
-        // const reactionHazards = document.getElementById('s2Table');
-        // const emergProcedures = document.getElementById('');
-        // const wasteDis = document.getElementById('');
-        // const endProd = document.getElementById('');
-
 
         // add other form data inputs here
         let data =
@@ -70,16 +56,7 @@ const Form = () => {
             'Identified Hazards: ' + idHazards.value + ' \r\n' +
             'Name of Assessor: ' + assName.value + ' \r\n' +
             'Name of Co-signatory: ' + coSignName.value + ' \r\n' +
-            'Experiment: ' + experiment.value + ' \r\n' +
-            'Risk Liklihood: ' + riskLikelihood.value + ' \r\n' +
-            'Risk Consequence' + riskConsequence.value + ' \r\n' +
-            'Reaction Hazards' + reactionHazards.value + ' \r\n' +
-            'Gloves' + gloves.value + ' \r\n' +
-            'Control Measure Content' + cmContent.value + ' \r\n' +
-            'Specify Prevention' + specifyPrevention.value + ' \r\n' +
-            'Additional Emergency Procedures' + AEP.value + ' \r\n' +
-            'Waste Disposal' + wasteDisposal.value + ' \r\n' +
-            'Management of End Product' + endProduct.value;
+            'Experiment: ' + experiment.value;
 
         const textToBLOB = new Blob([data], { type: 'text/plain' });
         const file = new Date().getTime();

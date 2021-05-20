@@ -3,7 +3,7 @@ import Form from './Form'
 import './App.css'
 import {
   BrowserRouter as Router,
-  Route,
+  Route
 } from "react-router-dom"
 
 function App() {
